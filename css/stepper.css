@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Lalezar&display=swap");
+
+:root {
+   --primary-color: #141436;
+   --secondary-color: #b6b6ce;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+.stepcontainer {
+    position: inherit;
+    left: 0;
+    top: 0;
+    font-family: "Lalezar",
+    cursive;
+    right: 0;
+    bottom: 0;
+    padding: 5% 10%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepcard{
+background-color: #fff;
+box-shadow: 0 0 4px 0 rgba(24, 94, 224, 0.15),
+0 6px 12px 0 rgba(24, 94, 224, 0.15);
+padding: 0.75rem;
+border-radius: 9px;
+}
+hr.solid {
+    border-top: 1px dashed #bbb;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    overflow: auto;
+    
+}
+
+.tabs * {
+    z-index: 2;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    /* width: 200px; */
+    font-size: 1rem;
+    padding: 3%;
+    font-weight: 900;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    transition: 0.15s ease-in-out;
+}
+
+ input[type=radio]:checked+label {
+    animation: mymove 1s ease-in-out forwards;
+}
+@keyframes mymove {
+    from{
+        font-size: 1rem;
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        z-index: 1;
+        border-radius: 9px;
+        transition: 0.25s ease-out;
+    }
+    to {
+       color: var(--primary-color);
+       font-size: 1.2rem;
+
+background-color: var(--secondary-color);
+z-index: 1;
+border-radius: 9px;
+transition: 0.25s ease-out;
+    }
+}
+@keyframes mymoveback {
+    from{
+
+         font-size: .8rem;
+         
+         background-color: var(--secondary-color);
+         z-index: 1;
+         border-radius: 9px;
+         transition: 0.25s ease-out;
+        
+    }
+    to {
+      font-size: .7rem;
+ color: var(--primary-color);
+      background-color: var(--secondary-color);
+      z-index: 1;
+      border-radius: 9px;
+      transition: 0.25s ease-out;
+    }
+}
+
+input[type=radio]:checked+label>.notification {
+    background-color: var(--primary-color);
+    color: #fff;
+
+}
+label{
+      font-family: "Lalezar",
+      cursive;
+}
+
+.tabcontent {
+    padding: 3%;
+    font-size: .8rem;
+    font-weight: 500;
+    animation: fadeEffect 1s;
+}
+
+.tabcontent h4{
+       font-size: 1.8rem;
+       font-weight: 500;
+        font-family: 'Comfortaa',
+        cursive;
+}
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* input[id=radio-1]:checked~.glider {
+    transform: translateX(0);
+} */
+
+/* input[id=radio-2]:checked~.glider {
+    transform: translateX(100%);
+}
+
+input[id=radio-3]:checked~.glider {
+    transform: translateX(200%);
+}
+input[id=radio-4]:checked~.glider {
+    transform: translateX(300%);
+}
+input[id=radio-5]:checked~.glider {
+    transform: translateX(400%);
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width: 200px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    border-radius: 9px;
+    transition: 0.25s ease-out;
+} */
+
+/* @media (max-width: 700px) {
+    .tabs {
+        transform: scale(0.6);
+    }
+} */

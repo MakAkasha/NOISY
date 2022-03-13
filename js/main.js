@@ -1,35 +1,27 @@
 "use strict"
 
 
+function openTab(evt, tab) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tab).style.display = "block";
+  //  evt.currentTarget.className += " active";
+}
+
 $(window).on("load", function() {
-    // Animation using ScrollReveal
-     var navListItems = $('ul.setup-panel li a'),
-        allWells = $('.setup-content');
-
-    allWells.hide();
-
-    navListItems.click(function(e)
-    {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
-            $item = $(this).closest('li');
-        
-        if (!$item.hasClass('disabled')) {
-            navListItems.closest('li').removeClass('active');
-            $item.addClass('active');
-            allWells.hide();
-            $target.show();
-        }
-    });
-    
-    $('ul.setup-panel li.active a').trigger('click');
-    
-    // DEMO ONLY //
-    $('#activate-step-2').on('click', function(e) {
-        $('ul.setup-panel li:eq(1)').removeClass('disabled');
-        $('ul.setup-panel li a[href="#step-2"]').trigger('click');
-        $(this).remove();
-    })   
+   
+    openTab(event, 'tc1');
+  
     // Selecting objects to be animated
     var animatedList1 = '.extra-lg-text, .extra-lg-text span, .lg-text, .lg-text span, .boxy .title, .post-box .title, .post-header .title, .boxy .slg-text';
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/flip.css">
     <link rel="stylesheet" href="css/glitch.css">
+<link rel="stylesheet" href="css/stepper.css">
+<link rel="stylesheet" href="css/slide.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -248,19 +250,56 @@
     <div class="container-fluid box-content">
         <div class="row">
             <div class="col-md-6">
-                  <div class="front-face" style="--bg: #141436">
+                <div class="ddt">
+                <dl>
+                    <dt>MTN</dt>
+                    <dd>MTN is goodd but not bad</dd>
+                    <dt>Hazem Helmy</dt>
+                    <dd>Hazem looks like a nerd</dd>
+                    <dt>Marsimba</dt>
+                    <dd>they make good music i give'em that </dd>
+                    
+                </dl>
+                </div>
+                  <!-- <div class="front-face" style="--bg: #141436">
                       <div class="contents front">
                           <p>
                              Recent Project
                           </p>
                          <span>Elmohandis Paints</span>
                       </div>
-                  </div>
+                  </div> -->
                   
               
             </div>
-            <div class="col-md-6 flip">
-                <div class="front-face" style="--bg: url(../images/img4.png)">
+            
+            <div class="col-md-6">
+                <div class="wrapper">
+                    <div class="slideshows">
+                        <div class="slideshow slideshow--hero">
+                            <div class="slides">
+                                <div class="slide slide1"></div>
+                                <div class="slide slide2"></div>
+                                <div class="slide slide3"></div>
+                            </div>
+                        </div>
+                        <div class="slideshow slideshow--contrast slideshow--contrast--before">
+                            <div class="slides">
+                                <div class="slide slide1"></div>
+                                <div class="slide slide2"></div>
+                                <div class="slide slide3"></div>
+                            </div>
+                        </div>
+                        <div class="slideshow slideshow--contrast slideshow--contrast--after">
+                            <div class="slides">
+                                <div class="slide slide1"></div>
+                                <div class="slide slide2"></div>
+                                <div class="slide slide3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="front-face" style="--bg: url(../images/img4.png)">
                     <div class="contents front"></div>
                 </div>
                 <div class="back-face" style="--bg: url(../images/img4.png)">
@@ -271,92 +310,64 @@
                         <a href="facebook.com/elmohandies"> <span>View on Facebook</span>
                         </a>
                     </div>
-                </div>
+                </div> -->
             
             </div>
         </div>
     </div>
-    <div class="stepper">
-  <div class="container">
-      <div class="row form-group">
-          <div class="col-xs-12">
-              <ul class="nav nav-pills nav-justified thumbnail setup-panel">
-                  <li class="active"><a href="#step-1">
-                          <h4 class="list-group-item-heading">Step 1</h4>
-                          <p class="list-group-item-text">SET KPIs</p>
-                      </a></li>
-                  <li ><a href="#step-2">
-                          <h4 class="list-group-item-heading">Step 2</h4>
-                          <p class="list-group-item-text">TARGET AUDIENCE</p>
-                      </a></li>
-                  <li ><a href="#step-3">
-                          <h4 class="list-group-item-heading">Step 3</h4>
-                          <p class="list-group-item-text">CHANNEL IDENTIFICATION</p>
-                      </a></li>
-                        <li><a href="#step-4">
-                                <h4 class="list-group-item-heading">Step 4</h4>
-                                <p class="list-group-item-text">CONTENT CREATION</p>
-                            </a></li>
-                              <li><a href="#step-5">
-                                      <h4 class="list-group-item-heading">Step 5</h4>
-                                      <p class="list-group-item-text">TRACKING RESULTS</p>
-                                  </a></li>
-              </ul>
+   <div class="stepcontainer">
+       <div class="stepcard">
+           
+       <div class="tabs">
+           <input type="radio" onclick="openTab(event, 'tc1')" id="radio-1" name="tabs" checked />
+           <label class="tab" for="radio-1">SET KPIs</label>
+           <input type="radio" onclick="openTab(event, 'tc2')" id="radio-2" name="tabs" />
+           <label class="tab" for="radio-2">TARGET AUDIENCE</label>
+           <input type="radio" onclick="openTab(event, 'tc3')" id="radio-3" name="tabs" />
+           <label class="tab" for="radio-3">CHANNEL IDENTIFICATION</label>
+             <input type="radio" onclick="openTab(event, 'tc4')" id="radio-4" name="tabs" />
+             <label class="tab" for="radio-4">CONTENT CREATION</label>
+               <input type="radio" onclick="openTab(event, 'tc5')" id="radio-5" name="tabs" />
+               <label class="tab" for="radio-5">TRACKING RESULTS</label>
+           <span class="glider"></span>
+           
+       </div>
+       <hr class="solid">
+       <div id="tc1" class="tabcontent">
+           <h4 class="text-center"> What are your goals and objectives?
+               What do you want to achieve with the budget allocated towards advertising?
+               How many people do you want to reach?
+               We will focus your campaign activities based on your vision, mission and
+               achieving the goals you set.</h4>
+       </div>
+        <div id="tc2" class="tabcontent">
+            <h4 class="text-center"> We target customers in terms of gender, age, market and their interests.
+                our agency will help define this persona in order to create marketing
+                campaigns that targets your segment of audience.</h4>
+        </div>
+         <div id="tc3" class="tabcontent">
+             <h4 class="text-center"> We advertise through all social media platforms, including; Facebook,
+                 Instagram, TikTok, and Twitter as well as traditional media such as television, radio and billboards.
+                 Using our access to influencer demographics, we use social media to match with the target audience with
+                 the right influencers. Use traditional media, our creative team will bring to life a concept that
+                 speaks
+                 to your target audience and represents your brand. </h4>
+         </div>
+          <div id="tc4" class="tabcontent">
+              <h4 class="text-center"> In order to make any Influencer marketing campaign successful,
+                  we cannot just rely on the followers of those specific Influencers. we to use the best way to
+                  engage with followers in order to create content to attract the Influencer’s audience to interact.
+              </h4>
           </div>
-      </div>
-      <div class="row setup-content" id="step-1">
-          <div class="col-xs-12">
-              <div class="col-md-12 well text-center">
-                  <h4 class="text-center"> What are your goals and objectives? 
-					What do you want to achieve with the budget allocated towards advertising? 
-					How many people do you want to reach? 
-					We will focus your campaign activities based on your vision, mission and 
-					achieving the goals you set.</h4>
-              </div>
-          </div>
-      </div>
-      <div class="row setup-content" id="step-2">
-          <div class="col-xs-12">
-              <div class="col-md-12 well">
-                  <h4 class="text-center"> We target customers in terms of gender, age, market and their interests.
-					our agency will help define this persona in order to create marketing 
-					campaigns that targets your segment of audience.</h4>
-              </div>
-          </div>
-      </div>
-      <div class="row setup-content" id="step-3">
-          <div class="col-xs-12">
-              <div class="col-md-12 well">
-                  <h4 class="text-center"> We advertise through all social media platforms, including; Facebook, 
-				  Instagram, TikTok, and Twitter as well as traditional media such as television, radio and billboards. 
-				  Using our access to influencer demographics, we use social media to match with the target audience with 
-				  the right influencers. Use traditional media, our creative team will bring to life a concept that speaks 
-				  to your target audience and represents your brand. </h4>
-              </div>
-          </div>
-      </div>
-      <div class="row setup-content" id="step-4">
-          <div class="col-xs-12">
-              <div class="col-md-12 well">
-                  <h4 class="text-center"> In order to make any Influencer marketing campaign successful, 
-				  we cannot just rely on the followers of those specific Influencers. we to use the best way to 
-				  engage with  followers in order to create content to attract the Influencer’s audience to interact.</h4>
-              </div>
-          </div>
-      </div>
-      <div class="row setup-content" id="step-5">
-          <div class="col-xs-12">
-              <div class="col-md-12 well">
-                  <h4 class="text-center"> This is the most important thing to do when you want to understand the 
-				  success of an influencer marketing campaign. We will put in place tracking pixels and tools 
-				  that will provide you with extensive reporting and tangible metrics for any of the activities 
-				  that we have chosen together.</h4>
-              </div>
-          </div>
-      </div>
-  
-  </div>
-  </div>
+           <div id="tc5" class="tabcontent">
+               <h4 class="text-center">This is the most important thing to do when you want to understand the
+                   success of an influencer marketing campaign. We will put in place tracking pixels and tools
+                   that will provide you with extensive reporting and tangible metrics for any of the activities
+                   that we have chosen together.</h4>
+           </div>
+      
+</div>
+   </div>
     <div class="container-fluid default-content" style="color: #141436;">
         <div class="row">
             <div class="col">

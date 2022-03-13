@@ -55,10 +55,7 @@ html {
     height: auto;
     padding: 34px !important;
 }
-<li a {
-    color: #141436 !important;
-    text-decoration: none;
-}
+
 
 .stepper{
     background-color: #141436;

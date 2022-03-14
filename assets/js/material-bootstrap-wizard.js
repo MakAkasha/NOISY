@@ -97,15 +97,27 @@ $(document).ready(function(){
                 $($wizard).find('.btn-next').hide();
                 $($wizard).find('.btn-finish').show();
                 $($wizard).find('.btn-finish').click(function () {
-                    // $.post("./php/mailer.php", {
-                    //         name: "Donald Duck",
-                    //         city: "Duckburg"
-                    //     },
-                    //     function (data, status) {
-                    //         alert("Data: " + data + "\nStatus: " + status);
-                    //     });
-                        var $form = $(this);
-                    console.log($form.serialize());
+                     var data = {
+                         "firstname": document.getElementById("firstname").value,
+                         "lastname": document.getElementById("lastname").value,
+                         "email": document.getElementById("email").value,
+                         "job":{
+                             "design": document.getElementById("design").checked ? ' checked ' : ' unchecked ',
+                             "code": document.getElementById("code").checked ? ' checked ' : ' unchecked ',
+                             "develop": document.getElementById("develop").checked ? ' checked ' : ' unchecked ',
+                         },
+                         "country": document.getElementById("country").value,
+                            "city": document.getElementById("city").value,
+                            "streetname": document.getElementById("streetname").value,
+                            "streetnumber": document.getElementById("streetnumber").value,
+                     };
+                     console.log(data);
+                    document.getElementById('overlay').style.visibility = 'hidden';
+                    $.post("./php/mailer.php",data,
+                        function (res, status) {
+                            alert( res);
+                        });
+                       
                 });
             } else {
                 $($wizard).find('.btn-next').show();

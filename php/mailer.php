@@ -10,7 +10,21 @@ require './mailer/src/SMTP.php';
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$name = $_POST['firstname']?:'';
+$email = $_POST['email']?:'';
+$lastname = $_POST['lastname']?:'';
+$job = $_POST['job']?:'';
+$country = $_POST['country']?:'';
+$city = $_POST['city']?:'';
+$streetnumber = $_POST['streetnumber']?:'';
+$streetname = $_POST['streetname']?:'';
+// $json = file_get_contents('php://input');
+$jsonDecode = json_encode($_POST);
+
+// Converts it into a PHP object foreach ($_POST as $id=>$value)
+// $data = json_decode($json);
+// echo $jsonDecode;
+// //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'ssl://noisy.sd';  // Specify main and backup SMTP servers
@@ -34,14 +48,14 @@ $mail->addAddress('mobark.k9@gmail.com', 'Mobark');     // Add a recipient
 // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Subject = 'New Contact from '.$name;
+$mail->Body    = 'new Contact <b>'.$jsonDecode.'</b>';
+$mail->AltBody = $jsonDecode;
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
+    echo 'sorry try one more time';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    echo 'Thanks '.$lastname.' we gonna contact you soon';
 }
 ?>

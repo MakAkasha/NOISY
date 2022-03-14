@@ -61,12 +61,12 @@ html {
     background-color: #141436;
     height: auto;
 }
-.nav-pills>li.active>a,
+/* .nav-pills>li.active>a,
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
     color: #fff;
     background-color: #141436 !important;
-}
+} */
 .container{
 padding: 10%;
 }
@@ -76,6 +76,31 @@ padding: 10%;
     position: absolute;
     top:50vh;
     
+}
+
+#OVER {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /*IE*/
+    top: 0;
+    text-align: center;
+    z-index: 5;
+    position: fixed;
+    background-color: #fff;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    left: 0;
+    /*IE*/
+    top: 0%;
+    /* font-color: #cdcdcd; */
+    /* font-size: 0.8em; */
+    /* text-align: center; */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.66);
 }
 
 .context h1{

@@ -39,7 +39,7 @@
 }
 
 .slideshow--hero .slide2 {
-    background-image: url(../images/hazem.jpg);
+    background-image: url(../images/img4.png);
     animation: 20s slides-set-2 -0.1s infinite;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .slideshow--contrast .slide2 {
-    background-image: linear-gradient(to bottom, rgba(200, 200, 75, 0.25) 0, rgba(200, 75, 75, 0.5) 100%), url(../images/hazem.jpg);
+    background-image: linear-gradient(to bottom, rgba(200, 200, 75, 0.25) 0, rgba(200, 75, 75, 0.5) 100%), url(../images/img4.png);
     animation: 20s slides-set-2 -0.2s infinite;
 }
 
@@ -236,32 +236,32 @@
 @keyframes slides-set-2 {
     0% {
         opacity: 0;
-        transform: scale(1.05);
+        transform: scale(3.05);
     }
 
     31% {
         opacity: 0;
-        transform: scale(1.05);
+        transform: scale(3.05);
     }
 
     34% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(2);
     }
 
     64% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(2);
     }
 
     67% {
         opacity: 0;
-        transform: scale(1.05);
+        transform: scale(2.05);
     }
 
     100% {
         opacity: 0;
-        transform: scale(1.05);
+        transform: scale(2.05);
     }
 }
 
@@ -325,9 +325,9 @@ dl * {
 dt {
     --size: 15vmin;
     bottom: 50%;
-    width: var(--size);
+    /* width: var(--size); */
     height: var(--size);
-    font-size: calc(var(--size) - 1vmin);
+    font-size: calc(var(--size) - 6vmin);
     opacity: 0;
     transform: translateY(100%);
     animation: dt 20s cubic-bezier(0.23, 1, 0.32, 1) infinite;
@@ -337,8 +337,8 @@ dt:after {
     content: "";
     position: absolute;
     top: 1vmin;
-    /* left: 0; */
-    width: 200%;
+    left: 0;
+    width: 100%;
     height: 100%;
     z-index: -1;
     transform-origin: 50% 100%;
@@ -377,7 +377,7 @@ dd {
     top: 55%;
     padding-left: 2rem;
     padding-right: 2rem;
-    max-width: 70vmin;
+    /* max-width: 70vmin; */
     font-size: calc(var(--size) - 1vmin);
     line-height: 1.2;
     opacity: 0;

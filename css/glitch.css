@@ -18,12 +18,12 @@
 .gli p {
     flex: 1;
     line-height: 0.75;
-    margin: auto;
+    margin: 10% auto;
     display: inline-block;
     font-family: "Lalezar",
     cursive;
     color: #FF0074;
-    font-size: 5.9rem;
+    /* font-size: 5.9rem; */
     text-align: center;
     /* transform: scaleX(var(--scale, 1)); */
     animation: glitch-p 11s infinite alternate;

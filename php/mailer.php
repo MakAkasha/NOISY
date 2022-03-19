@@ -36,12 +36,12 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->From = 'contact@noisy.sd';
-$mail->FromName = 'Noisy Contact Sender';
-$mail->addAddress('mobark.k9@gmail.com', 'Mobark');     // Add a recipient
+$mail->FromName = 'NOISY website';
+$mail->addAddress('sales@noisy.sd', 'NOISY Sales Team');     // Add a recipient
 // $mail->addAddress('ellen@example.com');               // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
-$mail->addCC('cc@example.com');
-$mail->addCC('')
+$mail->addCC('omar@noisy.sd');
+$mail->addCC('wael@noisy.sd')
 // $mail->addBCC('bcc@example.com');
 
 // $mail->WordWrap = 50;                                 // Set word wrap to 50 characters

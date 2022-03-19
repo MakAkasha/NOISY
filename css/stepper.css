@@ -141,8 +141,8 @@ label{
 
 .tabcontent h4{
        font-size: 1.8rem;
-       font-weight: 500;
-        font-family: 'Comfortaa',
+       font-weight: 300;
+        font-family: "Lalezar",
         cursive;
 }
 @keyframes fadeEffect {

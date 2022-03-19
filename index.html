@@ -67,7 +67,7 @@
             <div class="col">
                 <div class="extra-lg-text">
                     <span>We Are</span><br>
-                    <img src="images/Logo.svg" alt="NOISY" style="width: 50%; height: auto;"><br>
+                    <img src="images/Logo.svg" alt="NOISY" style="margin: 2%; width: 50%; height: auto;"><br>
                     <div class="gli">
                     <p data-text="CREATIVITY AMPLIFIED">CREATIVITY AMPLIFIED</p>
                     
@@ -429,9 +429,9 @@
                         Then we will contact you within 24 hours.</p>
                 </div>
                 <div class="btn-holder">
-                    <a href="#" onclick="()=> {
-                        document.getElementById('overlay').style.visibility = 'visible';return false;
-                    } "
+                    <a href="#" onclick="
+                        document.getElementById('overlay').style.visibility = 'visible';return true;
+                    "
                         class="cr-btn ex-padding">Make a NOISE</a>
                 </div>
             </div>
@@ -480,6 +480,7 @@
     <script src="js/anime.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
     <script src="js/main.js"></script>
+<script src="js/menu.js"></script>
         <script>
             $(function () {
                 $("#surveyIncluder").load("./includes/survey/index.html");

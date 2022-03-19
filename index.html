@@ -429,7 +429,9 @@
                         Then we will contact you within 24 hours.</p>
                 </div>
                 <div class="btn-holder">
-                    <a href="#" onclick="document.getElementById('overlay').style.visibility = 'visible';return false;"
+                    <a href="#" onclick="()=> {
+                        document.getElementById('overlay').style.visibility = 'visible';return false;
+                    } "
                         class="cr-btn ex-padding">Make a NOISE</a>
                 </div>
             </div>
